@@ -1,0 +1,83 @@
+﻿<Window x:Class="WordTrainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Word Trainer" Height="500" Width="800" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#F0F4F8">
+    
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" 
+                   Text="Тренажер для запоминания иностранных слов" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20" Foreground="#2C3E50" />
+
+        <!-- Левая панель -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10" VerticalAlignment="Top">
+            <Label Content="Категории:" FontWeight="Bold" />
+            <ComboBox x:Name="CategoryComboBox" Height="30" SelectionChanged="CategoryComboBox_SelectionChanged" />
+
+            <Label Content="Слово:" FontWeight="Bold" />
+            <TextBox x:Name="Russian" Height="30" />
+
+            <Label Content="Перевод:" FontWeight="Bold" />
+            <TextBox x:Name="Translation" Height="30" />
+
+            <Label Content="Категория:" FontWeight="Bold" />
+            <TextBox x:Name="Category" Height="30" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button x:Name="AddWordButton" Content="Добавить слово" 
+                Background="#3498DB" Foreground="White" 
+                FontWeight="Bold" Click="AddWordButton_Click" 
+                Height="35" Width="141" />
+                <Button x:Name="RemoveWordButton" Content="Удалить слово" 
+                Width="141" Click="RemoveWordButton_Click" 
+                Margin="10,0,0,0" Background="#FFE74C3C" Foreground="White" FontFamily="Segoe UI" FontWeight="Bold"/>
+               
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Правая панель -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,10,10,0" VerticalAlignment="Top" Height="269">
+            <Label Content="Слова:" FontWeight="Bold" />
+            <ListBox x:Name="WordListBox" SelectionChanged="WordListBox_SelectionChanged" 
+                     BorderBrush="#BDC3C7" BorderThickness="1" 
+                     MaxHeight="200" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button x:Name="Save" Content="Сохранение" Background="#9B59B6" Foreground="White" 
+                        FontWeight="Bold" Click="Save_Click" Width="100" Margin="0,0,10,0" Height="32" />
+                <Button x:Name="Load" Content="Загрузка" Background="#E74C3C" Foreground="White" 
+                        FontWeight="Bold" Click="Load_Click" Width="100" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Кнопка тренировки -->
+        <Button x:Name="StartTrainingButton" Content="Тренировка" 
+        Background="#27AE60" Foreground="White" 
+        FontWeight="Bold" Click="StartTrainingButton_Click" 
+        Grid.Row="1" 
+        HorizontalAlignment="Left" VerticalAlignment="Top" 
+        Height="40" Width="232" Margin="274,296,0,0" Grid.ColumnSpan="2" />
+
+        <!-- Счетчик -->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <TextBlock Text="Правильных ответов: " FontWeight="Bold" />
+            <TextBlock x:Name="RightAnswer" Width="50" Background="#DFF0D8" TextAlignment="Center" />
+            <TextBlock Text="Неправильных ответов: " FontWeight="Bold" Margin="10,0,0,0" />
+            <TextBlock x:Name="WrongAnswer" Width="50" Background="#F2DEDE" TextAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>

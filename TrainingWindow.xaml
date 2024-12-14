@@ -1,0 +1,20 @@
+﻿<Window x:Class="WordTrainer.TrainingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Тренировка" Height="400" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="WordText" Grid.Row="0" Text="Слово" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10" />
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+            <Button x:Name="Variant1Button" Width="200" Height="50" Click="VariantButton_Click" />
+            <Button x:Name="Variant2Button" Width="200" Height="50" Click="VariantButton_Click" />
+            <Button x:Name="Variant3Button" Width="200" Height="50" Click="VariantButton_Click" />
+            <Button x:Name="Variant4Button" Width="200" Height="50" Click="VariantButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

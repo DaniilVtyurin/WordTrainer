@@ -1,0 +1,62 @@
+[
+  {
+    "Russian": "Собака",
+    "Translation": "Dog",
+    "Category": "Животные"
+  },
+  {
+    "Russian": "Кошка",
+    "Translation": "Cat",
+    "Category": "Животные"
+  },
+  {
+    "Russian": "Обезьяна",
+    "Translation": "Monkey",
+    "Category": "Животные"
+  },
+  {
+    "Russian": "Рыба",
+    "Translation": "Fish",
+    "Category": "Животные"
+  },
+  {
+    "Russian": "Яблоко",
+    "Translation": "Apple",
+    "Category": "Фрукты"
+  },
+  {
+    "Russian": "Апельсин",
+    "Translation": "Orange",
+    "Category": "Фрукты"
+  },
+  {
+    "Category": "Фрукты",
+    "Russian": "Персик",
+    "Translation": "Peach"
+  },
+  {
+    "Russian": "Виноград",
+    "Translation": "Grape",
+    "Category": "Фрукты"
+  },
+  {
+    "Russian": "Сидеть",
+    "Translation": "Sit",
+    "Category": "Глаголы"
+  },
+  {
+    "Russian": "Лежать",
+    "Translation": "Lie",
+    "Category": "Глаголы"
+  },
+  {
+    "Russian": "Бежать",
+    "Translation": "Run",
+    "Category": "Глаголы"
+  },
+  {
+    "Russian": "Встать",
+    "Translation": "Stand up",
+    "Category": "Глаголы"
+  }
+]
